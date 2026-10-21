@@ -74,9 +74,11 @@ section{padding-block:96px 0}
 .addr b{color:var(--ink)}
 
 /* галерея */
-.gal{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:260px 260px;gap:14px}
+.gal{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto 220px;gap:14px}
 .gal figure{margin:0;position:relative;border-radius:20px;overflow:hidden;border:2px solid var(--line);cursor:zoom-in;background:var(--bg2)}
 .gal figure:first-child{grid-row:span 2}
+.gal figure:nth-child(2){aspect-ratio:1/1}
+.gal .mapcard{min-height:220px}
 .gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
 .gal figure:hover img{transform:scale(1.07)}
 .gal figcaption{position:absolute;left:14px;bottom:14px;background:rgba(12,16,48,.78);backdrop-filter:blur(6px);padding:6px 14px;border-radius:99px;font-weight:800;font-size:13px}
@@ -130,7 +132,8 @@ footer b{display:block;color:var(--ink);margin-bottom:4px}
 
 @media (max-width:860px){
   .visit{grid-template-columns:minmax(0,1fr)}
-  .gal{grid-template-columns:minmax(0,1fr);grid-template-rows:300px 220px 220px}
+  .gal{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+  .gal figure:first-child{aspect-ratio:1/1}
   .gal figure:first-child{grid-row:auto}
   .cont{grid-template-columns:minmax(0,1fr)}
   .hero{min-height:620px}
@@ -183,7 +186,7 @@ footer b{display:block;color:var(--ink);margin-bottom:4px}
   <div class="head"><h2>Внутри и снаружи</h2></div>
   <div class="gal">
     <figure><img src="hall.jpg" alt="Торговый зал Минимаркета" loading="lazy"><figcaption>Торговый зал</figcaption></figure>
-    <figure><img src="front.jpg" alt="Вход в магазин" style="object-position:30% 30%" loading="lazy"><figcaption>Вход</figcaption></figure>
+    <figure><img src="sign.jpg" alt="Вывеска Минимаркет над входом" style="object-position:50% 50%" loading="lazy"><figcaption>Вывеска</figcaption></figure>
     <div class="mapcard"><div class="pin"><i></i></div><div class="mt"><small>Где мы</small><b>Село Рахата</b><span>ул. Имама Шамиля, 3<br>Ботлихский район</span></div></div>
   </div>
 </div></section>
